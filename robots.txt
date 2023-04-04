@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+sitemap: https://charles-kanban.netlify.app/sitemap.xml

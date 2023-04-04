@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kanban Board Frontend</title>
+
+	<link rel="shortcut icon" href="./asset/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="./asset/favicon.ico">
+	<link rel="apple-touch-icon" sizes="152x152" href="./asset/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="./asset/favicon.ico">
+	<link rel="apple-touch-icon" sizes="167x167" href="./asset/favicon.ico">
+	<link rel="canonical" href="https://charles-kanban.netlify.app" />
+	<link rel="alternate" href="https://charles-kanban.netlify.app" hreflang="zh-tw" />
+
+	<meta name="description" content="使用純HTML，CSS，JS 實作前端工作任務看板">
+	<meta property="og:title" content="Charles Frontend Mission Kanban">
+	<meta property="og:description" content="使用純HTML，CSS，JS 實作前端工作任務看板作品 | 前端個人作品集">
+	<meta property="og:image" content="./asset/cover.jpg">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://charles-kanban.netlify.app" />
+	<meta property="og:site_name" content="Kanban Board Frontend By Charles Sin" />
+	<meta name="keywords"
+		content="kanban board, Frontend skill, Charles Frontend Entries, Charles 2023 前端 ｜ 前端工作任務看板" />
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Charles Frontend Mission Kanban" />
+	<meta name="twitter:description" content="使用純HTML，CSS，JS 實作前端工作任務看板作品 | 前端個人作品集" />
+	<meta name="twitter:image:src" content="./asset/cover.jpg" />
+
+	<meta name="google-site-verification" content="IqgaVQ4-W_ED-gWCuPP1fG5kL8uUmNx-eWj5iiyZ_Dw" />
+
+	<link rel="stylesheet" href="./bootstrap-5.3.0-alpha2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./stylesheet/style.css">
+
+	<script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg bg-body-tertiary shadow-lg">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">
+				<img src="./asset/logo.png" alt="logo" style="width: 50px; height: 50px;">
+				<span class="ms-2"> Kanban Board </span>
+			</a>
+			<button class="navbar-toggler d-none" type="button" data-bs-toggle="collapse"
+				data-bs-target="#nav-links-items" aria-controls="navbarNav" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse d-none" id="nav-links-items">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link active d-none" aria-current="page" href="#">Home</a>
+					</li>
+				</ul>
+			</div>
+			<div class="float-end p-2">
+				<a data-bs-toggle="collapse" href="#profile-collapse" role="button" aria-expanded="false"
+					aria-controls="profile-collapse">
+					<img class="img-fluid rounded-circle shadow-lg "
+						src="https://seeklogo.com/images/D/disney-stitch-logo-A7BF1EEBEF-seeklogo.com.png"
+						alt="user logo" style="width: 50px; height: 50px;" id="user-profile-img">
+				</a>
+				<div class="collapse position-absolute top-100 end-0 mt-10 zindex-dropdown z-3 shadow-lg w-auto"
+					id="profile-collapse">
+					<div class="card m-0 p-3">
+						<div class="card-body p-0">
+							<div class="d-grid gap-2">
+								<button type="button" class="btn btn-md btn-light" id="google-sign-in">
+									Sign in with Google
+								</button>
+							</div>
+						</div>
+						<div class="card-footer p-0 bg-transparent border-0">
+							<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+								<button class="btn btn-warning text-white d-none" type="button">Synchronization</button>
+								<button class="btn btn-danger" type="button" id="google-sign-out">Sign Out</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid p-2">
+		<div class="card m-0 shadow-lg rounded-4">
+			<div class="card-body p-0">
+				<div class="kanban overflow-scroll text-nowrap rounded-4"></div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./bootstrap-5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+	<script type="module" src="./javascript/script.js"></script>
+</body>
+
+</html>
