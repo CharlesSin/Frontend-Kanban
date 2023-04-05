@@ -2,6 +2,7 @@
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
 import { createFirestoreData, updateFirestoreData } from "../module/CRUD.js";
 import { checkUserStatus } from "../javascript/userStatus.js";
+import { initCloneMission } from "../javascript/initClone.js";
 
 import { app } from "../config/firebaseConfig.js";
 
@@ -35,6 +36,8 @@ export function googleSignInFunc() {
       });
 
       checkUserStatus();
+      localStorage.removeItem("kanban-data");
+      initCloneMission();
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -52,6 +55,7 @@ export function googleSignOutFunc() {
       localStorage.removeItem("googleCredential");
       localStorage.removeItem("googleToken");
       localStorage.removeItem("googleUser");
+      localStorage.removeItem("kanban-data");
       window.location.href = "./index.html";
     })
     .catch((error) => {
