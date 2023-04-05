@@ -4,7 +4,7 @@ Using Pure HTML, CSS, Javascript implementation frontend mission kanban
 
 ## Screenshot
 
-![alt cover]()
+![alt cover](https://github.com/CharlesSin/charles-kanban/blob/master/asset/cover.jpg)
 
 ## Demo
 
