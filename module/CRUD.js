@@ -27,24 +27,7 @@ export async function readFirestoreData(collectionID, userID = "") {
   } else {
     // doc.data() will be undefined in this case
     console.log("No such document!");
-    return [
-      {
-        id: 1,
-        items: [],
-      },
-      {
-        id: 2,
-        items: [],
-      },
-      {
-        id: 3,
-        items: [],
-      },
-      {
-        id: 4,
-        items: [],
-      },
-    ];
+    return [];
   }
 }
 
