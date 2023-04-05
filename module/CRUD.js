@@ -12,15 +12,39 @@ export async function createFirestoreData(collectionID, docID, data) {
 }
 
 // Read Data
-export async function readFirestoreData() {
-  const docRef = doc(firestoreDB, "cities", "SF");
+export async function readFirestoreData(collectionID, userID = "") {
+  let docRef;
+  if (userID !== "") {
+    docRef = doc(firestoreDB, `${collectionID}`, `${userID}`);
+  } else {
+    docRef = doc(firestoreDB, `${collectionID}`, "dummy");
+  }
   const docSnap = await getDoc(docRef);
 
   if (docSnap.exists()) {
-    console.log("Document data:", docSnap.data());
+    // console.log("Document data:", docSnap.data());
+    return docSnap.data();
   } else {
     // doc.data() will be undefined in this case
     console.log("No such document!");
+    return [
+      {
+        id: 1,
+        items: [],
+      },
+      {
+        id: 2,
+        items: [],
+      },
+      {
+        id: 3,
+        items: [],
+      },
+      {
+        id: 4,
+        items: [],
+      },
+    ];
   }
 }
 
